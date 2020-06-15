@@ -26,7 +26,6 @@ con.connect((err) => {
 app.post("/emps", function (req, res) {
     // get post data
     let data = req.body;
-    console.log(data);
     con.query("insert into emp values(?,?,?,?)", [data.empid, data.name, data.city, data.salary], (err, result) => {
         let r = {};
         if (err) {
@@ -36,26 +35,35 @@ app.post("/emps", function (req, res) {
             console.log(r);
         } else {
             console.log(result);
-            
-            const id=result.insertId;
             r.status = 'success';
-            r.message = 'Data Inserted with id :'+id;
+            r.message = 'Data Inserted with id :' + data.empid;
         }
-        res.json(r);    
+        res.json(r);
     });
 });
 
-app.get("/emps",(req,res)=>{
-    con.query("select * from emp",(err,result)=>{
+app.get("/emps", (req, res) => {
+    con.query("select * from emp", (err, result) => {
         res.json(result);
     });
 });
 
+app.get("/emps/:id", (req, res) => {
+    const id = req.params['id'];
+    con.query("select * from emp where empid=?", [id], (err, result) => {
+        if (err) {
+            res.json(err);
+        }
+        if(result && result.length>0)
+            res.json(result[0]);
+        else
+            res.json(null);
+    });
+});
 
-app.delete("/emps/:id",(req,res)=>{
-    const id=req.params['id'];
-    console.log('deleting emp with id'+id);
-    con.query("delete from emp where empid=?",[id],(err,result)=>{
+app.delete("/emps/:id", (req, res) => {
+    const id = req.params['id'];
+    con.query("delete from emp where empid=?", [id], (err, result) => {
         let r = {};
         if (err) {
             console.log(err);
@@ -63,41 +71,56 @@ app.delete("/emps/:id",(req,res)=>{
             r.message = err.sqlMessage;
             console.log(r);
         } else {
-            if(result.affectedRows>0){
+            if (result.affectedRows > 0) {
                 r.status = 'success';
                 r.message = `Data deleted with id : ${id}`;
-            }else{
+            } else {
                 r.status = 'fail';
-                r.message = `Data not found for id : ${id}`;       
-            }           
+                r.message = `Data not found for id : ${id}`;
+            }
         }
-        res.json(r);    
-    })    
+        res.json(r);
+    })
 });
 
-app.put("/emps/:id",(req,res)=>{
+app.put("/emps/:id", (req, res) => {
     let data = req.body;
-    const id=req.params['id'];
-    con.query("update emp set name=?,city=?,salary=? where empid=?",[data.name, data.city, data.salary,id], (err, result) => {
+    const id = req.params['id'];
+    con.query("update emp set name=?,city=?,salary=? where empid=?", [data.name, data.city, data.salary, id], (err, result) => {
         let r = {};
         if (err) {
             console.log(err);
             r.status = 'fail';
             r.message = err.sqlMessage;
         } else {
-            if(result.affectedRows>0){
+            if (result.affectedRows > 0) {
                 r.status = 'success';
                 r.message = `Data update for id : ${id}`;
-            }else{
+            } else {
                 r.status = 'fail';
-                r.message = `Data not found for id : ${id}`;       
-            } 
-           
+                r.message = `Data not found for id : ${id}`;
+            }
         }
-        res.json(r); 
+        res.json(r);
     });
 });
 
-app.listen(3000, function () {
+const server=app.listen(3000, function () {
     console.log('listening on 3000');
+});
+
+
+
+process.on('SIGINT', () => {
+    console.info('SIGINT signal received.');
+    console.log('Closing http server.');
+    server.close(() => {
+        console.log('Http server closed.');
+    });
+    console.log('Closing mysql connection.');
+    con.end((err) => {
+        console.log(err);
+    }, () => {
+        console.log("MySQL Closed");
+    });
 });
