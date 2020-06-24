@@ -11,6 +11,10 @@ http.createServer(function(req,res){
             let dataObj=querystring.parse(postData);
             res.writeHead(200,{"Content-Type":"text/html"});
             let jsonStr=JSON.stringify(dataObj);
+            console.log("Name="+dataObj.name);
+            console.log("Age="+dataObj.age);
+            
+            
             res.end(jsonStr);
         });
     }else{
