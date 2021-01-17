@@ -1,1 +1,194 @@
-[{"empid":"1000","name":"sohit","city":"pune","salary":"48000"},{"empid":"107","name":"suman sharma","city":"indore","salary":"12000"},{"empid":"45654","name":"Prads","city":"Delhi","salary":"80000"},{"empid":"67","name":"div","city":"mandsaur","salary":"12000"},{"empid":"106","name":"Seeta","city":"mumbai","salary":"100000"},{"empid":"109","name":"sumit","city":"indore","salary":"12000"},{"empid":"105","name":"Suman","city":"bhopal","salary":"12000"},{"empid":"112","name":"anki","city":"goa","salary":"100000"},{"empid":"103","name":"riya","city":"jaipur","salary":"16000"},{"empid":"601","name":"priya","city":"indore","salary":"18000"},{"empid":"13","name":"fdg","city":"gghh","salary":"1234"},{"empid":"211","name":"anat","city":"indore","salary":"20000"},{"empid":"118","name":"harshita","city":"pune","salary":"340000"},{"empid":"1","name":"sobhit verma","city":"vidisha","salary":"67000"},{"empid":"78","name":"divyaaaa","city":"mdsr","salary":"30000"},{"empid":"90","name":"Meet","city":"Delhi","salary":"678809"},{"empid":"45","name":"herry","city":"pakistan","salary":"45366"},{"empid":"1122","name":"harsh","city":"vidisha","salary":"18000"},{"empid":"102","name":"pratik","city":"pune","salary":"21"},{"empid":"111","name":"sourabh soniii","city":"knw","salary":"111101"},{"empid":"201","name":"pratik","city":"pune","salary":"21"},{"empid":"100","name":"kamlesh","city":"uttrakhand","salary":"123698"},{"empid":"7","name":"Durges","city":"jharkhand","salary":"300000"},{"empid":"16","name":"hj","city":"ko","salary":"120365"},{"empid":"69","name":"k","city":"k","salary":"66"},{"empid":"14","name":"Aman","city":"indore","salary":"12000"},{"empid":"6","name":"demo","city":"demo","salary":"78000"},{"empid":"15","name":"hh","city":"jj","salary":"999"},{"empid":"9","name":"aniket","city":"bhopal","salary":"550000"},{"empid":"99","name":"lalit","city":"bhilai","salary":"120000"},{"empid":"17","name":"aditya","city":"punjab","salary":"50000"},{"empid":"18","name":"A","city":"B","salary":"10"}]
+[
+    {
+        "empid": "1000",
+        "name": "sohit",
+        "city": "pune",
+        "salary": "48000"
+    },
+    {
+        "empid": "107",
+        "name": "suman sharma",
+        "city": "indore",
+        "salary": "12000"
+    },
+    {
+        "empid": "45654",
+        "name": "Prads",
+        "city": "Delhi",
+        "salary": "80000"
+    },
+    {
+        "empid": "67",
+        "name": "div",
+        "city": "mandsaur",
+        "salary": "12000"
+    },
+    {
+        "empid": "106",
+        "name": "Seeta",
+        "city": "mumbai",
+        "salary": "100000"
+    },
+    {
+        "empid": "109",
+        "name": "sumit",
+        "city": "indore",
+        "salary": "12000"
+    },
+    {
+        "empid": "105",
+        "name": "Suman",
+        "city": "bhopal",
+        "salary": "12000"
+    },
+    {
+        "empid": "112",
+        "name": "anki",
+        "city": "goa",
+        "salary": "100000"
+    },
+    {
+        "empid": "103",
+        "name": "riya",
+        "city": "jaipur",
+        "salary": "16000"
+    },
+    {
+        "empid": "601",
+        "name": "priya",
+        "city": "indore",
+        "salary": "18000"
+    },
+    {
+        "empid": "13",
+        "name": "fdg",
+        "city": "gghh",
+        "salary": "1234"
+    },
+    {
+        "empid": "211",
+        "name": "anat",
+        "city": "indore",
+        "salary": "20000"
+    },
+    {
+        "empid": "118",
+        "name": "harshita",
+        "city": "pune",
+        "salary": "340000"
+    },
+    {
+        "empid": "1",
+        "name": "sobhit verma",
+        "city": "vidisha",
+        "salary": "67000"
+    },
+    {
+        "empid": "78",
+        "name": "divyaaaa",
+        "city": "mdsr",
+        "salary": "30000"
+    },
+    {
+        "empid": "90",
+        "name": "Meet",
+        "city": "Delhi",
+        "salary": "678809"
+    },
+    {
+        "empid": "45",
+        "name": "herry",
+        "city": "pakistan",
+        "salary": "45366"
+    },
+    {
+        "empid": "1122",
+        "name": "harsh",
+        "city": "vidisha",
+        "salary": "18000"
+    },
+    {
+        "empid": "102",
+        "name": "pratik",
+        "city": "pune",
+        "salary": "21"
+    },
+    {
+        "empid": "111",
+        "name": "sourabh soniii",
+        "city": "knw",
+        "salary": "111101"
+    },
+    {
+        "empid": "201",
+        "name": "pratik",
+        "city": "pune",
+        "salary": "21"
+    },
+    {
+        "empid": "100",
+        "name": "kamlesh",
+        "city": "uttrakhand",
+        "salary": "123698"
+    },
+    {
+        "empid": "7",
+        "name": "Durges",
+        "city": "jharkhand",
+        "salary": "300000"
+    },
+    {
+        "empid": "16",
+        "name": "hj",
+        "city": "ko",
+        "salary": "120365"
+    },
+    {
+        "empid": "69",
+        "name": "k",
+        "city": "k",
+        "salary": "66"
+    },
+    {
+        "empid": "14",
+        "name": "Aman",
+        "city": "indore",
+        "salary": "12000"
+    },
+    {
+        "empid": "6",
+        "name": "demo",
+        "city": "demo",
+        "salary": "78000"
+    },
+    {
+        "empid": "15",
+        "name": "hh",
+        "city": "jj",
+        "salary": "999"
+    },
+    {
+        "empid": "9",
+        "name": "aniket",
+        "city": "bhopal",
+        "salary": "550000"
+    },
+    {
+        "empid": "99",
+        "name": "lalit",
+        "city": "bhilai",
+        "salary": "120000"
+    },
+    {
+        "empid": "17",
+        "name": "aditya",
+        "city": "punjab",
+        "salary": "50000"
+    },
+    {
+        "empid": "18",
+        "name": "A",
+        "city": "B",
+        "salary": "10"
+    }
+]

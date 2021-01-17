@@ -109,8 +109,6 @@ const server=app.listen(3000, function () {
     console.log('listening on 3000');
 });
 
-
-
 process.on('SIGINT', () => {
     console.info('SIGINT signal received.');
     console.log('Closing http server.');

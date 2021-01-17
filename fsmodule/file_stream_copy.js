@@ -1,17 +1,19 @@
 var fs=require('fs');
 
-var rs=fs.createReadStream("files/0122222.jpg");
-var ws=fs.createWriteStream("files/cimg.jpg");
+var rs=fs.createReadStream("files/012.jpg");
+var ws=fs.createWriteStream("files/013.jpg");
 
 rs.on("data",function(data){
-ws.write(data);
+    ws.write(data);
+    console.log("copy one chunk : "+data.length);
+    
 }).on("end",function(){
-ws.end();
+    ws.end();
 }).on("error",function(err){
-console.log(err);
+    console.log(err);
 });
 
 ws.on("finish",function(){
-console.log("Done");
+console.log("File Copy Done");
 
 });

@@ -4,12 +4,14 @@ var http=require('http');
 var fs=require("fs");
 
 http.createServer(function(req,res){
-    res.writeHead(200, {'Content-Type': 'text/html'});
-    fs.readFile("demo.html",function(err,data){
+   
+    fs.readFile("demo1234.html",function(err,data){
         if(err){
+            res.writeHead(404, {'Content-Type': 'text/html'});
             res.end("Error Found");
         }else{
-            res.end(data);
+            res.writeHead(200, {'Content-Type': 'text/html'});
+            res.end();
         }
     });
 }).listen(3000,function(){

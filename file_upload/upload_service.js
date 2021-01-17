@@ -1,5 +1,4 @@
 let multer=require('multer');
-let path=require("path");
 
 
 let disk_storage=multer.diskStorage(
@@ -14,6 +13,6 @@ let disk_storage=multer.diskStorage(
    }
 );
 
-let upload=multer({storage:disk_storage});
+let multerObj=multer({storage:disk_storage});
 
-module.exports=upload;
+module.exports=multerObj;

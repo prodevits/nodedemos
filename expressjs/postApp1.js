@@ -1,7 +1,11 @@
+var path=require('path');
 var express=require('express');
 var app=express();
 app.use(express.json()) // for parsing application/json
 app.use(express.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
+
+
+app.use(express.static(path.join(__dirname,'public')));
 
 app.post("/emp",function(req,res){
     // get post data

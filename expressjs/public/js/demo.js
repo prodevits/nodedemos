@@ -1,3 +1,3 @@
 setTimeout(function(){
 alert("Welcome");
-},500);
+},1500);

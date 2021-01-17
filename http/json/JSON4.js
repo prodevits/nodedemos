@@ -7,7 +7,7 @@ http.createServer(function(req,res){
         const readStream=fs.createReadStream('search.html');
 		readStream.pipe(res);
     }
-    else{
+    else if(req.url.startsWith("/doSearch")){
         let p=url.parse(req.url,true);
         let q=p.query;
       
@@ -34,6 +34,9 @@ http.createServer(function(req,res){
          res.write("<h2>Invalid Request</h2>");
         }
          res.end(); 
+    }
+    else{
+        res.end();   
     }
     
 }).listen(3000,()=>{

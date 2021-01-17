@@ -1,5 +1,5 @@
 var url = require('url');
-var adr = 'http://localhost:3000/demo.htm?name=aman&age=22&city=indore';
+var adr = 'http://localhost:3000/pqr/demo.htm?name=aman&age=22&city=indore';
 var q = url.parse(adr, true);
 
 console.log("Host="+q.host); 

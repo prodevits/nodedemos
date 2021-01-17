@@ -1,6 +1,6 @@
 let fs=require('fs');
 
-fs.writeFile("files/hello.txt","Hello Guest",function(err){
+fs.appendFile("files/hello1.txt","Hello Guest",function(err){
     if(err){
         console.log("Error ");
         console.log(err);        
@@ -9,3 +9,4 @@ fs.writeFile("files/hello.txt","Hello Guest",function(err){
         console.log("Done");        
     }
 });
+

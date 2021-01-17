@@ -13,7 +13,7 @@ con.connect(function(err) {
 
     console.log("Connected!");
 
-    con.query("insert into friends_table(name,dob) values('Rohan','2001-11-22')", function (err, result) {
+    con.query("insert into friends_table(name,dob) values('Raman','1998-11-22')", function (err, result) {
         if (err)
             {
                 console.log("Error :");

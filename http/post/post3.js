@@ -3,6 +3,8 @@ let querystring=require("querystring");
 let fs=require("fs");
 
 http.createServer(function(req,res){
+    console.log(req.method);
+    
     if(req.method=='POST'){
         let postData='';
         req.on("data",function(data){
@@ -10,12 +12,15 @@ http.createServer(function(req,res){
         }).on("end",function(){
             let dataObj=querystring.parse(postData);
             res.writeHead(200,{"Content-Type":"text/html"});
-            let jsonStr=JSON.stringify(dataObj);
+        
             console.log("Name="+dataObj.name);
-            console.log("Age="+dataObj.age);
-            
-            
-            res.end(jsonStr);
+            console.log("Age="+dataObj.age);            
+            res.write("Hello "+dataObj.name);  
+            res.end();
+
+            //  let jsonStr=JSON.stringify(dataObj);          
+            //res.end(jsonStr);
+           
         });
     }else{
         const rs=fs.createReadStream("emp.html");

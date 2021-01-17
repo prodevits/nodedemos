@@ -11,6 +11,9 @@ http.createServer(function(req,res){
         res.writeHead(200,{"Content-Type":"text/html"});
         let jsonStr=JSON.stringify(dataObj);
         res.end(jsonStr);
+        console.log("Name="+dataObj.name);
+        
+    
     });
 }).listen(3000,function(){
     console.log("Server is Ready on 3000");    
